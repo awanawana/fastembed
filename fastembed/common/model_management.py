@@ -113,7 +113,7 @@ class ModelManagement(Generic[T]):
 
         # Warn if the total size is zero
         if total_size_in_bytes == 0:
-            print(f"Warning: Content-length header is missing or zero in the response from {url}.")
+            logger.warning(f"Content-length header is missing or zero in the response from {url}.")
 
         show_progress = bool(total_size_in_bytes and show_progress)
 
